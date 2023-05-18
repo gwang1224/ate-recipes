@@ -20,6 +20,12 @@
    }
 }
 
+.div {
+   margin-top: 100px;
+   margin-bottom: 100px;
+   margin-right: 150px;
+   margin-left: 80px;
+ }
 /*Loading Screen*/
 .loading{
 background: rgb(242, 146, 183) no-repeat center center;
@@ -206,3 +212,32 @@ li.dropdown {
  .dropdown:hover .dropdown-content {
    display: block;
  }
+
+ .button {
+   border: 2px solid #8E3520;
+   color: #8E3520;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+ }
+
+  /* Create two equal columns that floats next to each other */
+  .col {
+   float: left;
+   width: 50%;
+   padding: 10px;
+   height: 300px; /* Should be removed. Only for demonstration */
+   }
+
+   /* Clear floats after the columns */
+   .row:after {
+   content: "";
+   display: table;
+   clear: both;
+   text-align: center;
+   vertical-align: middle;
+   }
