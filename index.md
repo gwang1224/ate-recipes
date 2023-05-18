@@ -1,8 +1,7 @@
 <!--Start of Website Content-->
-<div class="index-header">
-    <h1>ate.</h1>
+<div>
+    <img src="..//images/home.png" width="100%" height="100%">
 </div>
-
 
 <!--About Our Team-->
 <section class="team">
@@ -11,14 +10,14 @@
     <div class="row">
         <div class="team-col">
             <h1><a href="https://github.com/clairehzhao"><img src ="images/team/luna.png"></a></h1>
-            <h3>Claire Zhao</h3>
+            <h3>Alex Kumar</h3>
         </div>
         <div class="team-col">
             <h1><a href="https://github.com/gwang1224"><img src ="images/team/grace.png"></a></h1>
             <h3>Grace Wang</h3>
         </div>
         <div class="team-col">
-            <h1><a href="https://github.com/ClaireChen3"><img src ="images/team/emma.png"></a></h1>
+            <h1><a href="https://github.com/ClaireChen3"><img src ="images/team/clairec.png"></a></h1>
             <h3>Claire Chen</h3>
         </div>
     </div>
@@ -27,11 +26,11 @@
 <div class="row">
     <div class="team-col">
         <h1><a href=""><img src ="images/team/clairec.png"></a></h1>
-        <h3>Alex Kumar</h3>
+        <h3>Claire Chen</h3>
     </div>
     <div class="team-col">
         <h1><a href=""><img src ="images/team/clairez.png"></a></h1>
-        <h3>Ethan Tran</h3>
+        <h3>Claire Zhao</h3>
     </div>
     <div class="team-col">
         <h1><a href=""><img src ="images/team/annika.png"></a></h1>
