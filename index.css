@@ -157,7 +157,7 @@ h3{
 }
 /*hover effect*/
 .team-col:hover{
-   box-shadow: 0 0 20px rgba(89, 0, 255, 0.2);
+   box-shadow: 0 0 20px #77a062;
 /*dropdown menu for javascript*/
 }
 li a, .dropbtn {
