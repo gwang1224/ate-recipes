@@ -46,7 +46,7 @@ position: fixed;
    min-height: 10vh;
    width: 100%;
 /*linear gradient is how the background goes from the pink to the purple*/
-   background-color: #F0B9C5;
+   background-color: #608152;
    background-position: center;
    background-size: cover;
    position: relative;
@@ -125,6 +125,7 @@ nav img{
 }
 
 h1{
+   font-family: Didot, serif;
    font-size: 60px;
    font-weight: 600;
 }
@@ -150,14 +151,23 @@ p{
    padding: 20px 12px;
    box-sizing: border-box;
 }
+
+h2{
+   font-family: Didot, serif;
+   text-align: center;
+   font-weight: 600;
+   margin: 10px;
+}
+
 h3{
+   font-family: Didot, serif;
    text-align: center;
    font-weight: 600;
    margin: 10px;
 }
 /*hover effect*/
 .team-col:hover{
-   box-shadow: 0 0 20px rgba(89, 0, 255, 0.2);
+   box-shadow: 0 0 20px #77a062;
 /*dropdown menu for javascript*/
 }
 li a, .dropbtn {

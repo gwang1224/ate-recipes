@@ -1,59 +1,57 @@
 <!--Start of Website Content-->
-<div class="index-header">
-    <h1>ate.</h1>
-    <p>Lesson on User Interface (UI) and Java</p>
+<div>
+    <img src="..//images/home.png" width="100%" height="100%">
 </div>
 
-
 <!--About Our Team-->
+<body style="background-color: #F5F5EF">
 <section class="team">
-    <h1>MEET THE TEAM</h1>
-    <p>description of the team</p>
+    <h1>meet the team</h1>
+    <p></p>
     <div class="row">
         <div class="team-col">
-            <h1><a href="https://github.com/lunaiwa"><img src ="images/team/luna.png"></a></h1>
-            <h3>Luna Iwazaki</h3>
-            <p>Product Owner</p>
+            <h1><a href="https://github.com/clairehzhao"><img src ="images/team/luna.png"></a></h1>
+            <h3>Alex Kumar</h3>
         </div>
         <div class="team-col">
             <h1><a href="https://github.com/gwang1224"><img src ="images/team/grace.png"></a></h1>
             <h3>Grace Wang</h3>
-            <p>Technical Lead</p>
         </div>
         <div class="team-col">
-            <h1><a href="https://github.com/e-shen2022"><img src ="images/team/emma.png"></a></h1>
-            <h3>Emma Shen</h3>
-            <p>SCRUM Master</p>
+            <h1><a href="https://github.com/ClaireChen3"><img src ="images/team/clairec.png"></a></h1>
+            <h3>Claire Chen</h3>
         </div>
     </div>
 </section>
 <section class="team1">
 <div class="row">
     <div class="team-col">
-        <h1><a href="https://github.com/ClaireChen3"><img src ="images/team/clairec.png"></a></h1>
+        <h1><a href=""><img src ="images/team/clairec.png"></a></h1>
         <h3>Claire Chen</h3>
-        <p>Developer</p>
     </div>
     <div class="team-col">
-        <h1><a href="https://github.com/clairehzhao"><img src ="images/team/clairez.png"></a></h1>
+        <h1><a href=""><img src ="images/team/clairez.png"></a></h1>
         <h3>Claire Zhao</h3>
-        <p>Developer</p>
     </div>
     <div class="team-col">
-        <h1><a href="https://github.com/annikaliao"><img src ="images/team/annika.png"></a></h1>
-        <h3>Annika Liao</h3>
-        <p>Developer</p>
-    </div>
-    <div class="team-col">
-        <h1><a href="https://github.com/1908901"><img src ="images/team/ellie.png"></a></h1>
-        <h3>Ellie Pang</h3>
-        <p>Developer</p>
+        <h1><a href=""><img src ="images/team/annika.png"></a></h1>
+        <h3>Advay Shindikar</h3>
     </div>
 </div>
 </section>
-<!-- 
-<section class="about">
-    <h3>OUR MISSION</h3>
-    <p>Learning how to customize your website/game </p> -->
 
-<!-- </section> -->
+<div>
+    <img src="..//images/home2.png" width="100%" height="100%">
+</div>
+
+<br>
+<br>
+
+<section class="team1">
+    <h1>about us</h1>
+    <br>
+    <h2>Welcome to ate...</h2>
+    <p>the ultimate destination for discovering your ideal meals that not only tantalize your taste buds but also enhance your overall health and well-being. We understand that choosing the right food can be a challenge, especially when trying to balance flavor and nutrition. That's why we've created a unique website dedicated to helping you find precisely what you want to eat while prioritizing your health. At ate, we believe that healthy eating should never feel like a sacrifice. Our mission is to empower you to make informed decisions about your meals by providing personalized recommendations based on your individual preferences and specific health goals. Whether you're aiming to lose weight, follow a specific diet plan, or simply maintain a balanced lifestyle, we've got you covered.</p>
+</section>
+
+</body>
