@@ -4,8 +4,9 @@
 </div>
 
 <!--About Our Team-->
+<body style="background-color: #F5F5EF">
 <section class="team">
-    <h1>MEET THE TEAM</h1>
+    <h1>meet the team</h1>
     <p></p>
     <div class="row">
         <div class="team-col">
@@ -38,9 +39,19 @@
     </div>
 </div>
 </section>
-<!-- 
-<section class="about">
-    <h3>OUR MISSION</h3>
-    <p>Learning how to customize your website/game </p> -->
 
-<!-- </section> -->
+<div>
+    <img src="..//images/home2.png" width="100%" height="100%">
+</div>
+
+<br>
+<br>
+
+<section class="team1">
+    <h1>about us</h1>
+    <br>
+    <h2>Welcome to ate...</h2>
+    <p>the ultimate destination for discovering your ideal meals that not only tantalize your taste buds but also enhance your overall health and well-being. We understand that choosing the right food can be a challenge, especially when trying to balance flavor and nutrition. That's why we've created a unique website dedicated to helping you find precisely what you want to eat while prioritizing your health. At ate, we believe that healthy eating should never feel like a sacrifice. Our mission is to empower you to make informed decisions about your meals by providing personalized recommendations based on your individual preferences and specific health goals. Whether you're aiming to lose weight, follow a specific diet plan, or simply maintain a balanced lifestyle, we've got you covered.</p>
+</section>
+
+</body>

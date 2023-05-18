@@ -125,6 +125,7 @@ nav img{
 }
 
 h1{
+   font-family: Didot, serif;
    font-size: 60px;
    font-weight: 600;
 }
@@ -150,7 +151,16 @@ p{
    padding: 20px 12px;
    box-sizing: border-box;
 }
+
+h2{
+   font-family: Didot, serif;
+   text-align: center;
+   font-weight: 600;
+   margin: 10px;
+}
+
 h3{
+   font-family: Didot, serif;
    text-align: center;
    font-weight: 600;
    margin: 10px;
