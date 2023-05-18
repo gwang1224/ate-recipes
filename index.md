@@ -1,6 +1,6 @@
 <!--Start of Website Content-->
 <div class="index-header">
-    <h1>[EC]^2 GAL</h1>
+    <h1>ate.</h1>
     <p>Lesson on User Interface (UI) and Java</p>
 </div>
 
