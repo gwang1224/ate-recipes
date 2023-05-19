@@ -64,8 +64,6 @@ position: fixed;
    text-align: center;
    padding-top: 200px;
    padding-bottom: 360px;
-/*linear gradient is how the background goes from the pink to the purple*/
-   background-image: url("..//ate-recipes/images/home2.png");
    background-position: center;
    background-size: cover;
    position: relative;
@@ -103,7 +101,7 @@ nav{
    content: '';
    width: 0%;
    height: 2px;
-   background: #6E70AC;
+   background: white;
    display: block;
    margin: auto;
    transition: 0.5s;
