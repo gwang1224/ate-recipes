@@ -45,16 +45,6 @@
     </section>
 </div>
 
-<br>
-
-
-<section>
-    
-</section>
-
-<br>
-<br>
-
 <div>
     <!--About Our Team-->
     <section class="team">
@@ -62,7 +52,7 @@
         <p></p>
         <div class="row">
             <div class="team-col">
-                <h1><a href="https://github.com/clairehzhao"><img src ="images/team/luna.png"></a></h1>
+                <h1><a href="https://github.com/#"><img src ="images/team/#"></a></h1>
                 <h3>Alex Kumar</h3>
             </div>
             <div class="team-col">
@@ -78,15 +68,15 @@
     <section class="team1">
         <div class="row">
             <div class="team-col">
-                <h1><a href=""><img src ="images/team/clairec.png"></a></h1>
-                <h3>Claire Chen</h3>
+                <h1><a href=""><img src ="images/team/#"></a></h1>
+                <h3>Ethan Tran</h3>
             </div>
             <div class="team-col">
                 <h1><a href=""><img src ="images/team/clairez.png"></a></h1>
                 <h3>Claire Zhao</h3>
             </div>
             <div class="team-col">
-                <h1><a href=""><img src ="images/team/annika.png"></a></h1>
+                <h1><a href=""><img src ="images/team/#"></a></h1>
                 <h3>Advay Shindikar</h3>
             </div>
         </div>

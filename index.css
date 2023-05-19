@@ -130,6 +130,7 @@ nav{
 
 h1{
    font-family: Didot, serif;
+   color: #8E3520;
    font-size: 60px;
    font-weight: 600;
 }
@@ -169,11 +170,8 @@ h3{
    font-weight: 600;
    margin: 10px;
 }
-/*hover effect*/
-.team-col:hover{
-   box-shadow: 0 0 20px #8E3520;
-/*dropdown menu for javascript*/
-}
+
+
 li a, .dropbtn {
    display: inline-block;
    color: white;
