@@ -3,13 +3,13 @@
 
 <!-- home image -->
 <div>
-    <img src="..//images/home.png" width="100%" height="100%">
+    <img src="images/home.png" width="100%" height="100%">
 </div>
 
 <!-- buttons to links -->
 <div class="row">
     <div class="col">
-        <img src="..//images/recipes.png" width="700px" height="400px" style="text-align: right">
+        <img src="images/recipes.png" width="700px" height="400px" style="text-align: right">
     </div>
     <div class="col">
         <br>
@@ -28,7 +28,7 @@
 </div>
 
 <div>
-    <img src="..//images/home2.png" width="100%" height="100%">
+    <img src="images/home2.png" width="100%" height="100%">
 </div>
 
 <br>
