@@ -60,7 +60,17 @@
     <img src="..//images/recipes.png" width="700px" height="700px">
   </div>
   <div class="col">
-    <a href="https://gwang1224.github.io/ate-recipes/recipes.html" class="button">Search for recipes here!</a>
+    <br>
+    <a href="https://gwang1224.github.io/ate-recipes/recipes.html" class="button" style="text-align: center">Search for recipes</a>
+    <br>
+    <br>
+    <a href="https://gwang1224.github.io/ate-recipes/recommendations.html" class="button" style="text-align: center">Get your personalized recommendation</a>
+    <br>
+    <br>
+    <a href="https://gwang1224.github.io/ate-recipes/ratings.html" class="button" style="text-align: center">Rate your recipes here</a>
+    <br>
+    <br>
+    <a href="https://gwang1224.github.io/ate-recipes/blog.html" class="button" style="text-align: center">Join a community of fatties!</a>
   </div>
 </div>
 </body>

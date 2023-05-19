@@ -225,6 +225,12 @@ li.dropdown {
    cursor: pointer;
  }
 
+ .button:hover {
+   background-color:#8E3520;
+   color: white;
+   transition: 0.7s;
+}
+
   /* Create two equal columns that floats next to each other */
   .col {
    float: left;
@@ -240,4 +246,9 @@ li.dropdown {
    clear: both;
    text-align: center;
    vertical-align: middle;
+   }
+
+   a{
+      font-family: Didot, serif;
+      text-align: center;
    }
