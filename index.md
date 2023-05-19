@@ -40,7 +40,7 @@
     <section class="team1">
         <h1>about us</h1>
         <br>
-        <h2>Welcome to ate...</h2>
+        <h2>welcome to ate...</h2>
         <p>the ultimate destination for discovering your ideal meals that not only tantalize your taste buds but also enhance your overall health and well-being. We understand that choosing the right food can be a challenge, especially when trying to balance flavor and nutrition. That's why we've created a unique website dedicated to helping you find precisely what you want to eat while prioritizing your health. At ate, we believe that healthy eating should never feel like a sacrifice. Our mission is to empower you to make informed decisions about your meals by providing personalized recommendations based on your individual preferences and specific health goals. Whether you're looking for a new recipe, aiming to follow a specific diet plan, or simply maintain a balanced lifestyle, we've got you covered.</p>
     </section>
 </div>
