@@ -27,14 +27,28 @@
             cursor: pointer;
             margin: 0 5px;
         }
-        .rating-container input[type="radio"]:checked ~ label img {
-            opacity: 1;
-        }
         .rating-container label img {
             width: 50px;
             height: 50px;
-            opacity: 0.5;
-            transition: opacity 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+        }
+        .rating-container input[type="radio"]:checked ~ label img {
+            transform: scale(1.2);
+        }
+        .rating-container input[type="radio"]:checked ~ label:nth-of-type(1) img {
+            transform: scale(1.2);
+        }
+        .rating-container input[type="radio"]:checked ~ label:nth-of-type(2) img {
+            transform: scale(1.2);
+        }
+        .rating-container input[type="radio"]:checked ~ label:nth-of-type(3) img {
+            transform: scale(1.2);
+        }
+        .rating-container input[type="radio"]:checked ~ label:nth-of-type(4) img {
+            transform: scale(1.2);
+        }
+        .rating-container input[type="radio"]:checked ~ label:nth-of-type(5) img {
+            transform: scale(1.2);
         }
         button {
             background-color: #4CAF50;
