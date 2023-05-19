@@ -22,7 +22,7 @@
         <a href="https://gwang1224.github.io/ate-recipes/ratings.html" class="button" style="text-align: center">Rate your recipes here</a>
         <br>
         <br>
-        <a href="https://gwang1224.github.io/ate-recipes/blog.html" class="button" style="text-align: center">Join a community of fatties!</a>
+        <a href="https://gwang1224.github.io/ate-recipes/blog.html" class="button" style="text-align: center">Join our community!</a>
         <br>
     </div>
 </div>
