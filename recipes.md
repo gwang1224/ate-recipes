@@ -1,5 +1,3 @@
-<!-- DOESN'T WORK PLS FIX THIS BECAUSE I DO NOT WANT TO thx -grace :) -->
-
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
@@ -9,7 +7,7 @@
 <table>
   <thead>
   <tr>
-    <th>Food</th>
+    <th>food</th>
     <th>ingredients</th>
     <th>servings</th>
     <th>instructions</th>
