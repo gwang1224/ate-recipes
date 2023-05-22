@@ -246,3 +246,17 @@ li.dropdown {
       font-family: Didot, serif;
       text-align: center;
    }
+
+   .feedback {
+      background-color : #7D974D;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      border-color: white;
+    }
+    
+    #mybutton {
+      position: fixed;
+      bottom: -4px;
+      right: 10px;
+    }
