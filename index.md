@@ -68,15 +68,15 @@
     <section class="team1">
         <div class="row">
             <div class="team-col">
-                <h1><a href=""><img src ="images/team/#"></a></h1>
+                <h1><a href="https://github.com/realethantran"><img src ="images/team/ethant.png"></a></h1>
                 <h3>Ethan Tran</h3>
             </div>
             <div class="team-col">
-                <h1><a href=""><img src ="images/team/#"></a></h1>
+                <h1><a href="https://github.com/AlexKumar19"><img src ="images/team/alexk.png"></a></h1>
                 <h3>Alex Kumar</h3>
             </div>
             <div class="team-col">
-                <h1><a href=""><img src ="images/team/#"></a></h1>
+                <h1><a href="https://github.com/ADVAYS16"><img src ="images/team/advays.png"></a></h1>
                 <h3>Advay Shindikar</h3>
             </div>
         </div>
