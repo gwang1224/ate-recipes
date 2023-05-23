@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <!--the header section or the top part of every page-->
-        <section class="header">
-            <nav>
-                <!--the logo on the header-->
-                <a href="https://github.com/gwang1224/ate-recipes"><img src ="images/white_mushroom.png"  width="30px" height="30px"></a>
-                
-                <div class="nav-links">
-                    <ul>
-                        <!--the links to the other pages-->
-                        <li><a href="{{ site.baseurl }}/">home</a></li>
-                        <li><a href="{{ site.baseurl }}/recipes.html">recipes</a></li>
-                        <li><a href="{{ site.baseurl }}/blog.html">community</a></li>
-                        <li><a href="{{ site.baseurl }}/ratings.html">ratings</a></li>
-                        <li><a href="{{ site.baseurl }}/recommendations.html">recommendations</a></li>
-                    </ul>
-                    <!--loading screen-->
-                    <script>
-                        var loader = document.getElementById("loading");
-                        window.addEventListener("load", function(){
-                            loader.style.display = "none";
-                        })
-                    </script>
-                </div>
-            </nav>
-        </section>
-    </body>
-</html>
-
-
-
+    <style>
+        pre {
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+<body>
+    <section class="header">
+        <nav>
+            <a href="https://github.com/gwang1224/ate-recipes"><img src="images/white_mushroom.png" width="30px" height="30px"></a>
+            
+            <div class="nav-links">
+                <ul>
+                    <li><a href="{{ site.baseurl }}/">home</a></li>
+                    <li><a href="{{ site.baseurl }}/recipes.html">recipes</a></li>
+                    <li><a href="{{ site.baseurl }}/blog.html">community</a></li>
+                    <li><a href="{{ site.baseurl }}/ratings.html">ratings</a></li>
+                    <li><a href="{{ site.baseurl }}/recommendations.html">recommendations</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+</body>
