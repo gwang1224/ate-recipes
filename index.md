@@ -1,8 +1,8 @@
 <!-- home image -->
 <div>
     <img src="images/home.png" width="100%" height="100%">
-    <div class="mushroom-animation" style="display: flex; flex-direction: row;">
-        <pre class="mushroom-animation" style="margin: 0;">
+    <div class="mushroom-animation loading-animation" style="display: flex; flex-direction: row; justify-content: center;">
+        <pre class="mushroom-animation" style="margin-left: 0;">
             ___..._
         _,--'       "`-.
       ,'.  .            \
@@ -19,8 +19,8 @@
            ` `itz `(,
         </pre>
         
-        <pre class="mushroom-animation" style="margin: 0; margin-left: -10px;">
-                 .-'~~~-.
+<pre class="mushroom-animation" style="margin: 0; margin-left: -10px;">
+                        .-'~~~-.
                      .'o  oOOOo`.
                     :~~~-.oOo   o`.
                      `. \ ~-.  oOOo.
@@ -31,7 +31,7 @@
 _______\|/__________\\;_\\//___\|/________
     </pre>
     
-    <pre class="mushroom-animation" style="margin: 0; margin-left: -10px;">
+<pre class="mushroom-animation" style="margin: 0; margin-left: -10px;">
           __....__ 
        .'"         "`. 
      .'               `.  
@@ -46,9 +46,30 @@ _______\|/__________\\;_\\//___\|/________
         J       L
         :       : 
         `._____.'
-        </pre>
+    </pre>
 </div>
 </div><!-- home image -->
+
+<style>
+    @keyframes loading {
+        0% {
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .loading-animation {
+        animation: loading 15s ease-in-out infinite;
+    }
+</style>
 
 <body style="background-color: #F5F5EF">
 <!-- buttons to links -->
