@@ -1,75 +1,40 @@
 <!-- home image -->
 <div>
     <img src="images/home.png" width="100%" height="100%">
-    <div class="mushroom-animation loading-animation" style="display: flex; flex-direction: row; justify-content: center;">
-        <pre class="mushroom-animation" style="margin-left: 0;">
-            ___..._
-        _,--'       "`-.
-      ,'.  .            \
-    ,/:. .     .       .'
-    |;..  .      _..--'
-    `--:...-,-'""\
-            |:.  `.
-            l;.   l
-            `|:.   |
-             |:.   `.,
-            .l;.    j, ,
-         `. \`;:.   //,/
-          .\\)`;,|\'/(
-           ` `itz `(,
-        </pre>
-        
-<pre class="mushroom-animation" style="margin: 0; margin-left: -10px;">
-                        .-'~~~-.
-                     .'o  oOOOo`.
-                    :~~~-.oOo   o`.
-                     `. \ ~-.  oOOo.
-                       `.; / ~.  OO:
-                       .'  ;-- `.o.'
-                      ,'  ; ~~--'~
-                      ;  ;
-_______\|/__________\\;_\\//___\|/________
-    </pre>
-    
-<pre class="mushroom-animation" style="margin: 0; margin-left: -10px;">
-          __....__ 
-       .'"         "`. 
-     .'               `.  
-    .                   . 
-   .       __...__       .
-. _.--"""       """--._ .
-:"                     ";
- `-.__    :   :    __.-'
-      """-:   :-"""   
-         J     L    
-         :     :  
-        J       L
-        :       : 
-        `._____.'
-    </pre>
+   <div class="loading-screen">
+  <div class="mushroom"></div>
 </div>
+<style>
+.loading-screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+}
+.mushroom {
+  width: 50px;
+  height: 50px;
+  background-image: url('./images/green_mushroom.png'); /* Replace with your mushroom image */
+  background-size: cover;
+  animation: mushroomAnimation 1s infinite;
+}
+@keyframes mushroomAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+</style>
 </div><!-- home image -->
 
-<style>
-    @keyframes loading {
-        0% {
-            opacity: 0;
-        }
-        20% {
-            opacity: 1;
-        }
-        80% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
 
-    .loading-animation {
-        animation: loading 15s ease-in-out infinite;
-    }
-</style>
 
 <body style="background-color: #F5F5EF">
 <!-- buttons to links -->
