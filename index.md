@@ -1,54 +1,40 @@
 <!-- home image -->
 <div>
     <img src="images/home.png" width="100%" height="100%">
-    <div class="mushroom-animation" style="display: flex; flex-direction: row;">
-        <pre class="mushroom-animation" style="margin: 0;">
-            ___..._
-        _,--'       "`-.
-      ,'.  .            \
-    ,/:. .     .       .'
-    |;..  .      _..--'
-    `--:...-,-'""\
-            |:.  `.
-            l;.   l
-            `|:.   |
-             |:.   `.,
-            .l;.    j, ,
-         `. \`;:.   //,/
-          .\\)`;,|\'/(
-           ` `itz `(,
-        </pre>
-        
-        <pre class="mushroom-animation" style="margin: 0; margin-left: -10px;">
-                 .-'~~~-.
-                     .'o  oOOOo`.
-                    :~~~-.oOo   o`.
-                     `. \ ~-.  oOOo.
-                       `.; / ~.  OO:
-                       .'  ;-- `.o.'
-                      ,'  ; ~~--'~
-                      ;  ;
-_______\|/__________\\;_\\//___\|/________
-    </pre>
-    
-    <pre class="mushroom-animation" style="margin: 0; margin-left: -10px;">
-          __....__ 
-       .'"         "`. 
-     .'               `.  
-    .                   . 
-   .       __...__       .
-. _.--"""       """--._ .
-:"                     ";
- `-.__    :   :    __.-'
-      """-:   :-"""   
-         J     L    
-         :     :  
-        J       L
-        :       : 
-        `._____.'
-        </pre>
+   <div class="loading-screen">
+  <div class="mushroom"></div>
 </div>
+<style>
+.loading-screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+}
+.mushroom {
+  width: 50px;
+  height: 50px;
+  background-image: url('./images/green_mushroom.png'); /* Replace with your mushroom image */
+  background-size: cover;
+  animation: mushroomAnimation 1s infinite;
+}
+@keyframes mushroomAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+</style>
 </div><!-- home image -->
+
+
 
 <body style="background-color: #F5F5EF">
 <!-- buttons to links -->
@@ -127,13 +113,71 @@ _______\|/__________\\;_\\//___\|/________
 </section>
 
 <!-- Shopping List Button -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Styles for the shopping list */
+.shopping-list {
+  list-style-type: none;
+  padding: 0;
+}
+.shopping-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.shopping-list li span {
+  margin-right: 10px;
+}
+/* Styles for the popup form */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 1px solid #ccc;
+  z-index: 9;
+  width: 400px; /* Updated width */
+}
+.form-container {
+  max-width: 100%;
+  padding: 20px;
+  background-color: white;
+}
+.form-container input[type=text],
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+}
+.form-container button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+.form-container button:hover {
+  opacity: 0.8;
+}
+.form-container .btn.cancel {
+  background-color: red;
+}
+</style>
+</head>
+<body>
+
 <button class="open-button" onclick="openForm()">My Shopping List</button>
 
 <div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
+  <form class="form-container">
     <h2>Shopping List</h2>
-    <!-- shopping list -->
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    <ul id="shoppingList" class="shopping-list"></ul>
+    <input type="text" id="itemInput" placeholder="Item" required>
+    <input type="text" id="priceInput" placeholder="Price" required>
+    <input type="number" id="quantityInput" placeholder="Quantity" required>
+    <button type="button" onclick="addItem()">Add Item</button>
+    <button type="button" onclick="closeForm()" class="btn cancel">Close</button>
   </form>
 </div>
 
@@ -141,10 +185,40 @@ _______\|/__________\\;_\\//___\|/________
     function openForm() {
         document.getElementById("myForm").style.display = "block";
     }
+    
     function closeForm() {
         document.getElementById("myForm").style.display = "none";
+    }
+    
+    function addItem() {
+        var itemInput = document.getElementById("itemInput");
+        var priceInput = document.getElementById("priceInput");
+        var quantityInput = document.getElementById("quantityInput");
+        var shoppingList = document.getElementById("shoppingList");
+        
+        var item = itemInput.value;
+        var price = priceInput.value;
+        var quantity = quantityInput.value;
+        
+        if (item !== "" && price !== "" && quantity !== "") {
+            var listItem = document.createElement("li");
+            listItem.innerHTML = '<span>' + item + '</span>' + '<span>$' + price + '</span>' + '<span>Quantity: ' + quantity + '</span>' + '<button onclick="removeItem(this)">Remove</button>';
+            shoppingList.appendChild(listItem);
+            
+            // Clear the input fields
+            itemInput.value = "";
+            priceInput.value = "";
+            quantityInput.value = "";
+        }
+    }
+    
+    function removeItem(button) {
+        var listItem = button.parentNode;
+        var shoppingList = listItem.parentNode;
+        shoppingList.removeChild(listItem);
     }
 </script>
 
 </body>
 </html>
+
