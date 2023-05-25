@@ -61,7 +61,7 @@
     const resultContainer = document.getElementById("result");
 
     // prepare fetch options
-    const url = "http://127.0.0.1:8086/api/recipe/";
+    const url = "https://ated.duckdns.org/";
     const headers = {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
