@@ -1,3 +1,3 @@
 # The Official Website for 'ate'
 
-[Link to our Site](https://gwang1224.github.io/ate-recipes/)
+[Link to our site](https://gwang1224.github.io/ate-recipes/)
