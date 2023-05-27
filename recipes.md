@@ -61,7 +61,7 @@
     const resultContainer = document.getElementById("result");
 
     // prepare fetch options
-    const url = "https://ated.duckdns.org/";
+    const url = "https://ated.duckdns.org/api/recipe/";
     const headers = {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
