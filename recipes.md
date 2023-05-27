@@ -10,9 +10,14 @@
     height: 50px;
     width: 1000px;
   }
+  #enter{
+    height: 50px;
+    width: 100px;
+  }
 </style>
   <div class="search_bar">
     <input id="search" type="text" placeholder="Search Recipe..">
+      <button id="enter" type="button">Enter</button>
   </div>
 </body>
 </html>
