@@ -18,6 +18,11 @@
   <div class="search_bar">
     <input id="search" type="text" placeholder="Search Recipe..">
       <button id="enter" type="button">Enter</button>
+      <script>
+        // ... Existing JavaScript code ...
+          const enterButton = document.getElementById("enter");
+          enterButton.addEventListener("click", searchRecipe);
+      </script>
   </div>
 </body>
 </html>
@@ -159,6 +164,86 @@
       tr.appendChild(td);
       resultContainer.appendChild(tr);
     });
+
+    function searchRecipe() {
+  // Get the search input value
+  const searchInput = document.getElementById("search").value;
+
+  // Prepare fetch options with the search query
+  const url = "https://ated.duckdns.org/api/recipe/?search=" + encodeURIComponent(searchInput);
+  const headers = {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'default',
+    credentials: 'omit',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  };
+
+  // Clear the existing table rows
+  const resultContainer = document.getElementById("result");
+  resultContainer.innerHTML = "";
+
+  // Display loading message while fetching data
+  const loadingMessage = document.getElementById("loading");
+  loadingMessage.style.display = "block";
+  loadingMessage.textContent = "Loading...";
+
+  // Fetch the API with search query
+  fetch(url, headers)
+    .then(response => {
+      // Check for response errors
+      if (response.status !== 200) {
+        const errorMsg = 'Database response error: ' + response.status;
+        console.log(errorMsg);
+        const tr = document.createElement("tr");
+        const td = document.createElement("td");
+        td.innerHTML = errorMsg;
+        tr.appendChild(td);
+        resultContainer.appendChild(tr);
+        loadingMessage.style.display = "none";
+        return;
+      }
+      // Fetch the data from API
+      response.json().then(data => {
+        console.log(data);
+        // Hide the loading message
+        loadingMessage.style.display = "none";
+        // Iterate through the data and add rows to the table
+        for (let row of data) {
+          addRowToTable(row);
+        }
+      }).catch(err => {
+        console.error(err);
+        const tr = document.createElement("tr");
+        const td = document.createElement("td");
+        td.innerHTML = err;
+        tr.appendChild(td);
+        resultContainer.appendChild(tr);
+        loadingMessage.style.display = "none";
+      });
+    }).catch(err => {
+      console.error(err);
+      const tr = document.createElement("tr");
+      const td = document.createElement("td");
+      td.innerHTML = err;
+      tr.appendChild(td);
+      resultContainer.appendChild(tr);
+      loadingMessage.style.display = "none";
+    });
+}
+
+function addRowToTable(rowData) {
+  const tr = document.createElement("tr");
+  for (let key in rowData) {
+    const td = document.createElement("td");
+    td.innerHTML = rowData[key];
+    tr.appendChild(td);
+  }
+  const resultContainer = document.getElementById("result");
+  resultContainer.appendChild(tr);
+}
 </script>
 
 <!-- Shopping List Button -->
