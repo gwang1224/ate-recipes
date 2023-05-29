@@ -41,20 +41,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-<br>
-
-<div>
-<form class="example">
-  <input type="text" placeholder="Search for a recipe" name="search">
-  <button type="submit" id="food"><i class="fa fa-search"></i></button>
-</form>
-</div>
-
-<br>
+<!--the header section or the top part of every page-->
 
 <main id="content" class="main-content" role="main">
     <!-- HTML table fragment for page -->
@@ -81,7 +71,7 @@
     const resultContainer = document.getElementById("result");
 
     // prepare fetch options
-    const url = "http://127.0.0.1:8086/api/recipe/";
+    const url = "https://ated.duckdns.org/api/recipe/";
     const headers = {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
@@ -274,79 +264,3 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 </script>
-
-
-
-
-
-<!-- Without Backend -->
-<html>
-<head>
-  <title>Recipe Search</title>
-  <style>
-    /* Add some basic styling */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    input[type="text"] {
-      padding: 10px;
-      width: 300px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    #results {
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Recipe Search</h1>
-  <input type="text" id="searchInput" placeholder="Enter a recipe keyword">
-  <button onclick="searchRecipes()">Search</button>
-  <div id="results"></div>
-
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script>
-    function searchRecipes() {
-      var input = document.getElementById("searchInput").value;
-      // Make a GET request to the API
-      axios.get('https://recipe-by-api-ninjas.p.rapidapi.com/v1/recipe', {
-        headers: {
-          'X-RapidAPI-Key': '53ed50b3c5mshb1ebce663573fbap1a08a4jsneab1f395e0a6',
-          'X-RapidAPI-Host': 'recipe-by-api-ninjas.p.rapidapi.com'
-        },
-        params: {
-          q: input
-        }
-      })
-      .then(function(response) {
-        var resultsDiv = document.getElementById("results");
-        resultsDiv.innerHTML = "";
-        // Check if recipes exist
-        console.log(response.data)
-        if (response.data && response.data.recipes && response.data.recipes.length > 0) {
-          var recipes = response.data.recipes;
-          recipes.forEach(function(recipe) {
-            var recipeDiv = document.createElement("div");
-            recipeDiv.innerHTML = "<h3>" + recipe.title + "</h3>";
-            recipeDiv.innerHTML += "<p>" + recipe.description + "</p>";
-            resultsDiv.appendChild(recipeDiv);
-          });
-
-        } else {
-          resultsDiv.innerHTML = "<p>No recipes found.</p>";
-        }
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-    }
-  </script>
-</body>
-</html>
