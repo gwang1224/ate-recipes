@@ -1,38 +1,7 @@
 <!-- home image -->
 <div>
     <img src="images/home.png" width="100%" height="100%">
-   <div class="loading-screen">
-  <div class="mushroom"></div>
-</div>
-<style>
-.loading-screen {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f3f3f3;
-}
-.mushroom {
-  width: 50px;
-  height: 50px;
-  background-image: url('./images/green_mushroom.png'); /* Replace with your mushroom image */
-  background-size: cover;
-  animation: mushroomAnimation 1s infinite;
-}
-@keyframes mushroomAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-</style>
-</div><!-- home image -->
+<!-- home image -->
 
 
 
