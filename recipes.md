@@ -71,6 +71,10 @@
 </section>
 </div>
 
+<br>
+<br>
+<br>
+
 <script>
     // prepare HTML result container for new output
     const resultContainer = document.getElementById("result");
