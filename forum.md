@@ -68,7 +68,7 @@
 
   <script>
     // Fetch and display all posts
-    fetch('/posts')
+    fetch('https://ated.duckdns.org/api/forum/')
       .then(response => response.json())
       .then(posts => {
         const postsContainer = document.getElementById('posts');
@@ -89,7 +89,7 @@
         text: formData.get('content')
       };
 
-      fetch('/posts', {
+      fetch('https://ated.duckdns.org/api/forum/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
