@@ -29,7 +29,6 @@ table{
 }
 </style>
 
-WHY IS MY IMAGE NOT SHOWING UP
 <div>
 <img src="images/blog_home.png" width="100%">
   <section class="team1">
