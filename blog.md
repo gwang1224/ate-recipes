@@ -2,6 +2,17 @@
     <head>
         <link rel="stylesheet" href="index.css">
     </head>
+
+<div>
+<img src="images/blog_home.png" width="100">
+  <section class="team1">
+      <br>
+      <p>Whether it's a family recipe, quick snack, or 3 course meal, add your recipe to our virtual cookbook!</p>
+  </section>
+</div>
+
+<br>
+
         <table>
             <thead>
             <tr>
