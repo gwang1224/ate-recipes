@@ -68,7 +68,7 @@
 
   <script>
     // Fetch and display all posts
-    fetch('http://localhost:4000/posts')
+    fetch('/posts')
       .then(response => response.json())
       .then(posts => {
         const postsContainer = document.getElementById('posts');
@@ -89,7 +89,7 @@
         text: formData.get('content')
       };
 
-      fetch('http://localhost:4000/posts', {
+      fetch('/posts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
