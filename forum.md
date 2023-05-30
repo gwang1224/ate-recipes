@@ -132,6 +132,7 @@
 
       return postElement;
     }
+    print()
   </script>
 </body>
 </html>
