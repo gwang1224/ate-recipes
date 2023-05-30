@@ -1,92 +1,137 @@
-
 <html>
 <head>
   <title>Forum</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
-      margin: 0;
-      padding: 0;
-    }
+    /* Container styles */
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
     }
-    h1 {
-      text-align: center;
-    }
+    /* Post styles */
     .post {
-      background-color: #ffffff;
-      border-radius: 5px;
-      padding: 20px;
       margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f2f2f2;
     }
     .post-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
+      font-size: 24px;
+      margin: 0;
     }
     .post-author {
-      font-size: 14px;
-      color: #666666;
-      margin-bottom: 10px;
+      font-style: italic;
+      margin-top: 5px;
     }
     .post-content {
-      margin-bottom: 10px;
+      margin-top: 10px;
     }
     .post-date {
       font-size: 12px;
-      color: #999999;
+      color: #888;
+      margin-top: 5px;
     }
+    /* Post form styles */
     .post-form {
       margin-top: 20px;
-      text-align: center;
     }
     .post-form input[type="text"],
     .post-form textarea {
       width: 100%;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #cccccc;
       margin-bottom: 10px;
+      padding: 5px;
     }
     .post-form input[type="submit"] {
-      background-color: #4CAF50;
+      background-color: #4caf50;
       color: white;
       border: none;
-      border-radius: 5px;
-      padding: 10px;
       cursor: pointer;
-      display: inline-block;
+      padding: 10px 20px;
+    }
+    .post-form input[type="submit"]:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Forum</h1>
-    <div class="post">
-      <h2 class="post-title">Post Title</h2>
-      <p class="post-author">Posted by John Doe</p>
-      <p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis metus vel ex volutpat dapibus.</p>
-      <p class="post-date">Posted on May 30, 2023</p>
-    </div>
-    <div class="post">
-      <h2 class="post-title">Another Post Title</h2>
-      <p class="post-author">Posted by Jane Smith</p>
-      <p class="post-content">Praesent et urna dignissim, viverra nulla at, fermentum sem.</p>
-      <p class="post-date">Posted on May 28, 2023</p>
-    </div>
+    <div id="posts"></div>
     <div class="post-form">
       <h2>Create a New Post</h2>
-      <form>
-        <input type="text" name="title" placeholder="Title" required>
+      <form id="create-post-form">
         <input type="text" name="author" placeholder="Author" required>
         <textarea name="content" placeholder="Content" required></textarea>
         <input type="submit" value="Submit">
       </form>
     </div>
   </div>
+
+  <script>
+    // Fetch and display all posts
+    fetch('http://localhost:4000/posts')
+      .then(response => response.json())
+      .then(posts => {
+        const postsContainer = document.getElementById('posts');
+        posts.forEach(post => {
+          const postElement = createPostElement(post);
+          postsContainer.appendChild(postElement);
+        });
+      });
+
+    // Handle form submission to create a new post
+    const createPostForm = document.getElementById('create-post-form');
+    createPostForm.addEventListener('submit', event => {
+      event.preventDefault();
+
+      const formData = new FormData(createPostForm);
+      const post = {
+        name: formData.get('author'),
+        text: formData.get('content')
+      };
+
+      fetch('http://localhost:4000/posts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(post)
+      })
+      .then(response => response.json())
+      .then(createdPost => {
+        const postElement = createPostElement(createdPost);
+        const postsContainer = document.getElementById('posts');
+        postsContainer.appendChild(postElement);
+        createPostForm.reset();
+      });
+    });
+
+    // Helper function to create a post element
+    function createPostElement(post) {
+      const postElement = document.createElement('div');
+      postElement.className = 'post';
+
+      const titleElement = document.createElement('h2');
+      titleElement.className = 'post-title';
+      titleElement.textContent = post.name;
+      postElement.appendChild(titleElement);
+
+      const authorElement = document.createElement('p');
+      authorElement.className = 'post-author';
+      authorElement.textContent = 'Posted by ' + post.name;
+      postElement.appendChild(authorElement);
+
+      const contentElement = document.createElement('p');
+      contentElement.className = 'post-content';
+      contentElement.textContent = post.text;
+      postElement.appendChild(contentElement);
+
+      const dateElement = document.createElement('p');
+      dateElement.className = 'post-date';
+      dateElement.textContent = 'Posted on ' + new Date().toLocaleDateString();
+      postElement.appendChild(dateElement);
+
+      return postElement;
+    }
+  </script>
 </body>
 </html>
