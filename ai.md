@@ -20,6 +20,8 @@
   <pre id="ship-animation"></pre>
 
   <script>
+    require('dotenv').config();
+
     function shipPrint(position) {
       const animationElement = document.getElementById('ship-animation');
       const spaces = ' '.repeat(position);
@@ -46,7 +48,7 @@
       return new Promise(resolve => setTimeout(resolve, ms));
     }
     function callAPI() {
-            var api_key = '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';
+            var api_key = process.env.API_KEY;
             var endpoint = 'https://api.openai.com/v1/completions';
             var headers = {
                 'Authorization': 'Bearer ' + api_key,
@@ -90,6 +92,51 @@
         }
 
     
+  </script>
+</body>
+</html>
+
+  <script>
+
+    require('dotenv').config();
+
+    function addFood(foodName) {
+      const foodInput = document.getElementsByName(foodName)[0];
+      const foodValue = foodInput.value.trim();
+      if (foodValue !== '') {
+        favorite_foods[foodValue] = true;
+        foodInput.value = '';
+      }
+    }
+
+    async function call(text) {
+  const api_key = process.env.API_KEY;
+
+        const endpoint = 'https://api.openai.com/v1/completions';
+        const headers = {
+        'Authorization': 'Bearer ' + api_key,
+        'Content-Type': 'application/json'
+      };
+      const data = {
+        'model': 'text-davinci-003', // Updated to use 'text-davinci-003' model
+        'prompt': text,
+        'max_tokens': 75
+      };
+
+      const response = await fetch(endpoint, { method: 'POST', headers, body: JSON.stringify(data) });
+      const result = await response.json();
+
+      const completed_text = result.choices[0].text;
+      alert(completed_text);
+    }
+
+    function submitFoods() {
+      const foods = Object.keys(favorite_foods);
+      if (foods.length > 0) {
+        const foodsString = foods.join(', ');
+        call("Give me a specific type of cuisine based on the foods that I like. Start by saying 'You would enjoy [cuisine].' Also, briefly describe the given cuisine. Here are the foods: " + foodsString);
+      }
+    }
   </script>
 </body>
 </html>
