@@ -165,7 +165,7 @@
   const searchInput = document.getElementById("search").value;
 
 // Prepare fetch options with the search query
-  const url = "https://ated.duckdns.org/api/recipe/?search=" + encodeURIComponent(searchInput);
+  const url = "https://ated.duckdns.org/api/recipe/" + encodeURIComponent(searchInput);
   const headers = {
     method: 'GET',
     mode: 'cors',
