@@ -17,12 +17,7 @@
 </style>
   <div class="search_bar">
     <input id="search" type="text" placeholder="Search Recipe..">
-      <button id="enter" type="button">Enter</button>
-      <script>
-        // ... Existing JavaScript code ...
-          const enterButton = document.getElementById("enter");
-          enterButton.addEventListener("click", searchRecipe);
-      </script>
+      <button onclick="searchRecipe()" id="enter" type="button">Enter</button>
   </div>
 </body>
 </html>
@@ -169,7 +164,7 @@
   // Get the search input value
   const searchInput = document.getElementById("search").value;
 
-  // Prepare fetch options with the search query
+// Prepare fetch options with the search query
   const url = "https://ated.duckdns.org/api/recipe/?search=" + encodeURIComponent(searchInput);
   const headers = {
     method: 'GET',
