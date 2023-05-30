@@ -314,3 +314,23 @@ li.dropdown {
     .form-container .btn:hover, .open-button:hover {
       opacity: 1;
     }
+
+
+    /* Search Bar */
+    .search_bar{
+      border-width: 30px;
+      padding-top: 100px;
+      align-content: center;
+    }
+    #search{
+      height: 50px;
+      width: 1000px;
+    }
+    #enter{
+      height: 50px;
+      width: 100px;
+    }
+
+    ::-webkit-input-placeholder {
+      text-align: center;
+    }

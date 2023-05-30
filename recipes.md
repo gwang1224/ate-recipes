@@ -1,55 +1,66 @@
 <html>
-<body>
+
+<head>
+      <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <style>
-  .search_bar{
-    border-width: 30px;
-    padding-top: 100px;
-    align-content: center;
-  }
-  #search{
-    height: 50px;
-    width: 1000px;
-  }
-  #enter{
-    height: 50px;
-    width: 100px;
-  }
+
+#recipe td, #recipe th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#recipe tr:nth-child(even){background-color: #f2f2f2;}
+
+/* #recipe tr:hover {
+  background-color: #DDC89B;
+  color: white;
+  } */
+
+#recipe th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #D3BFA9;
+  color: white;
+}
 </style>
+
+<div>
+  <img src="images/recipes_home.png" width="100%">
+  <section class="team1">
+      <br>
+      <h2>fulfill any craving...</h2>
+      <p>Who doesn't love soup? Here are some soup recipes to get you started!</p>
+  </section>
+</div>
+
+<div>
+<section class="team1">
+<body>
   <div class="search_bar">
     <input id="search" type="text" placeholder="Search Recipe..">
-      <button onclick="searchRecipe()" id="enter" type="button">Enter</button>
+      <button onclick="searchRecipe()" id="enter" type="button">🔍</button>
   </div>
 </body>
-</html>
-<!-- DOESN'T WORK PLS FIX THIS BECAUSE I DO NOT WANT TO thx -grace :) -->
+</section>
+</div>
 
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-<head>
-    <!--iphone or other device view so it can format correctly-->
-    <title>ate.</title>
-    <!--to connect to the .css sheet in this case it will be index.css since there will be a different .css pae for each page so there can be easy clean up-->
-    <link rel="stylesheet" href="index.css">
-    <!--the google fonts links front https://fonts. google.com/-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
+<br>
 
-<!--the header section or the top part of every page-->
-
+<div>
+<section class="team1">
 <main id="content" class="main-content" role="main">
     <!-- HTML table fragment for page -->
-    <table>
+    <table id="recipe">
         <thead>
             <tr>
-                <th>food</th>
-                <th>ingredients</th>
-                <th>servings</th>
-                <th>instructions</th>
+                <th style="width:10%">food</th>
+                <th style="width:30%">ingredients</th>
+                <th style="width:10%">servings</th>
+                <th style="width:50%">instructions</th>
             </tr>
         </thead>
         <tbody id="result">
@@ -57,9 +68,8 @@
         </tbody>
     </table>
 </main>
-
-<!-- Loading screen -->
-<div id="loading">Loading...</div>
+</section>
+</div>
 
 <script>
     // prepare HTML result container for new output
