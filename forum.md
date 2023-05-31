@@ -41,11 +41,13 @@
       padding: 5px;
     }
     .post-form input[type="submit"] {
-      background-color: #4caf50;
+      background-color: #8E3520; /* Updated color */
       color: white;
       border: none;
       cursor: pointer;
       padding: 10px 20px;
+      width: 100%; /* Make the submit button as wide as the container */
+      box-sizing: border-box; /* Ensure the padding is included in the width */
     }
     .post-form input[type="submit"]:hover {
       background-color: #45a049;

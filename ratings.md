@@ -36,7 +36,7 @@
             transform: scale(1.2);
         } 
         button {
-            background-color: #4CAF50;
+            background-color: #8E3520; /* Updated color */
             border: none;
             color: white;
             padding: 10px 20px;
@@ -61,7 +61,7 @@
             margin-bottom: 10px;
         }
         .comment-container button {
-            background-color: #4CAF50;
+            background-color: #8E3520; /* Updated color */
             border: none;
             color: white;
             padding: 10px 20px;
@@ -118,13 +118,6 @@
             <!-- User feedback will be dynamically added here -->
         </ul>
     </div>
-    <html>
-<head>
-    <title>Recipe Rating</title>
-    <style>
-        /* Styles omitted for brevity */
-    </style>
-</head>
     <script>
         function submitRating() {
             var rating = document.querySelector('input[name="rating"]:checked').value;
@@ -156,4 +149,5 @@
             xhr.send(JSON.stringify({ comment: comment }));
         }
     </script>
+</body>
 </html>
