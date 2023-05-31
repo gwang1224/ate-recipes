@@ -82,7 +82,6 @@
 </section>
 
 <!-- Shopping List Button -->
-<!DOCTYPE html>
 <html>
 <head>
 <style>
