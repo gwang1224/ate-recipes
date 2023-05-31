@@ -52,6 +52,10 @@
     .post-form input[type="submit"]:hover {
       background-color: #45a049;
     }
+    /* Center the title */
+    h1 {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
