@@ -6,10 +6,10 @@
     #shop tr:nth-child(even){
       background-color: #f2f2f2;
     }
-    /* #recipe tr:hover {
-      background-color: #DDC89B;
+    #shop tr:hover {
+      background-color: #8E3520;
       color: white;
-    } */
+    }
     #shop th {
       padding-top: 12px;
       padding-bottom: 12px;
