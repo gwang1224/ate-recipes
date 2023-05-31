@@ -95,15 +95,15 @@
     <h1>Rate the Recipe</h1>
     <div class="rating-container">
         <input type="radio" id="rating1" name="rating" value="1">
-        <label for="rating1"><img src="./images/green_mushroom.png"></label>
+        <label for="rating1"><img src="./images/Screen Shot 2023-05-30 at 5.17.38 PM.png"></label>
         <input type="radio" id="rating2" name="rating" value="2">
-        <label for="rating2"><img src="./images/green_mushroom.png"></label>
+        <label for="rating2"><img src="./images/Screen Shot 2023-05-30 at 5.17.38 PM.png"></label>
         <input type="radio" id="rating3" name="rating" value="3">
-        <label for="rating3"><img src="./images/green_mushroom.png"></label>
+        <label for="rating3"><img src="./images/Screen Shot 2023-05-30 at 5.17.38 PM.png"></label>
         <input type="radio" id="rating4" name="rating" value="4">
-        <label for="rating4"><img src="./images/green_mushroom.png"></label>
+        <label for="rating4"><img src="./images/Screen Shot 2023-05-30 at 5.17.38 PM.png"></label>
         <input type="radio" id="rating5" name="rating" value="5">
-        <label for="rating5"><img src="./images/green_mushroom.png"></label>
+        <label for="rating5"><img src="./images/Screen Shot 2023-05-30 at 5.17.38 PM.png"></label>
     </div>
     <button onclick="submitRating()">Submit Rating</button>
     <div class="comment-container">
