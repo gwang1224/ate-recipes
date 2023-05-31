@@ -1,15 +1,42 @@
+<style>
+    #shop td, #shop th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    #shop tr:nth-child(even){
+      background-color: #f2f2f2;
+    }
+    /* #recipe tr:hover {
+      background-color: #DDC89B;
+      color: white;
+    } */
+    #shop th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #D3BFA9;
+      color: white;
+    }
+
+    table {
+
+    }
+  </style>
+
+<div>
+<section class="team1">
 <form>
   <p>
     <label>Item:
-      <input type="text" name="name" id="name" required>
+      <input type="text" food="food" id="food" onchange="add()" required>
     </label>
   </p>
   <p>
-    <button onclick="addRowToTable()">Add Item</button>
+    <button class="button">Add Item</button>
   </p>
 </form>
 
-<table>
+<table id="shop" style="width:100%">
   <thead>
     <tr>
       <th>Item</th>
@@ -19,95 +46,147 @@
     <!-- javascript generated data -->
   </tbody>
 </table>
+</section>
+</div>
+
+
+
 
 <script>
-  // prepare HTML result container for new output
-  const resultContainer = document.getElementById("result");
+ const resultContainer = document.getElementById("result");
+  const url = "https://ated.duckdns.org/api/shop"
+  // Accessed CRUD methods with RESTapi endpoints
+  const create_fetch = url + '/create';
+  const read_fetch = url + '/';
+  const del_fetch = url + '/delete';
 
-  // fetch the API
-  fetch("https://ated.duckdns.org/api/shop/")
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      for (let row of data) {
-        addRow(row);
-      }
+  read_users();
+
+  // Display Score Table, data is fetched from Backend Database (scores table)
+  function read_users() {
+    // prepare fetch options
+    const read_options = {
+      method: 'GET', // GET method
+      mode: 'cors', 
+      cache: 'default', 
+      credentials: 'omit', 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    };
+
+    // fetch the data from API
+    fetch(read_fetch, read_options)
+      .then(response => {
+        // checks for errors in response
+        if (response.status !== 200) {
+            const errorMsg = 'Database read error: ' + response.status;
+            console.log(errorMsg);
+            const tr = document.createElement("tr");
+            const td = document.createElement("td");
+            td.innerHTML = errorMsg;
+            tr.appendChild(td);
+            resultContainer.appendChild(tr);
+            return;
+        }
+        // if no error, json data is printed
+        response.json().then(data => {
+            console.log(data);
+            for (let row in data) {
+              console.log(data[row]);
+              add_row(data[row]);
+            }
+        })
     })
+    // catch fetch errors, if API data can not be fetched
     .catch(err => {
       console.error(err);
-    });
-
-  function addRow(rowData) {
-    const tr = document.createElement("tr");
-    const td = document.createElement("td");
-    td.textContent = rowData.name;
-    tr.appendChild(td);
-    resultContainer.appendChild(tr);
-  }
-
-  function addRowToTable() {
-    const nameInput = document.getElementById("name");
-    const name = nameInput.value;
-
-    if (name) {
       const tr = document.createElement("tr");
       const td = document.createElement("td");
-      td.textContent = name;
+      td.innerHTML = err;
       tr.appendChild(td);
       resultContainer.appendChild(tr);
+    });
+  }
 
-      nameInput.value = "";
-
-      // Create the request body
-      const requestBody = {
-        name: name
-      };
-
-      // Send the POST request to the backend
-      fetch("https://ated.duckdns.org/api/shop/", {
+ 
+  function create_user(){
+    //Creates user with inputted score
+    const body = {
+        food: document.getElementById("food").value,
+    };
+    const requestOptions = {
         method: 'POST',
+        body: JSON.stringify(body),
         headers: {
-          'Content-Type': 'application/json'
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
         },
-        body: JSON.stringify(requestBody)
-      })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
+    };
+
+    // Fetch API call to the database to create a new user
+    fetch(create_fetch, requestOptions)
+      .then(response => {
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        // response contains valid result
+        response.json().then(data => {
+            console.log(data);
+            add_row(data);
         })
-        .catch(err => {
-          console.error(err);
-        });
-    }
+    })
   }
 
   function delete_record() {
-    resultContainer.innerHTML = "";
+  const delOptions = {
+        method: 'DELETE',
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
+
+    // URL for DELETE API
+    // Fetch API call to the database to create a new user
+    fetch(del_fetch, delOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          window.location.reload();
+          return;
+        }
+        // response contains valid result
+        response.json().then(data => {
+            console.log(data);
+        })
+    })
   }
+
+  function add_row(data) {
+    const tr = document.createElement("tr");
+    const food = document.createElement("td");
+
+  
+
+    // obtain data that is specific to the API
+    food.innerHTML = data.food; 
+
+    // add HTML to container
+	  tr.appendChild(food);
+
+    resultContainer.appendChild(tr);
+  }
+  
+function add(){
+// Checks if input score is a number and within 0-10
+    create_user();
+}
 </script>
-
-<!-- Shopping List Button -->
-<button class="open-button" onclick="openForm()">My Shopping List</button>
-
-<div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h2>Shopping List</h2>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
-
-<script>
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-  }
-
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
-</script>
-
-<div>
-  <form action="javascript:delete_record()">
-    <button>Delete Items</button>
-  </form>
-</div>
