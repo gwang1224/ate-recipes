@@ -3,7 +3,7 @@
     <title>Recipe Rating</title>
     <style>
         body {
-            background-color: #f5f5f5;
+            background-color: white
             color: #333333;
             font-family: Arial, sans-serif;
             margin: 0;
