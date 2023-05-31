@@ -3,38 +3,38 @@
     <title>Recipe Rating</title>
     <style>
         body {
-            background-color: white
+            background-color: white;
             color: #333333;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
             text-align: center;
-        }       
+        }
         h1 {
             margin-bottom: 30px;
-        }        
+        }
         .rating-container {
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 30px;
-        }        
+        }
         .rating-container input[type="radio"] {
             display: none;
-        }       
+        }
         .rating-container label {
             display: inline-block;
             cursor: pointer;
             margin: 0 5px;
-        }   
+        }
         .rating-container label img {
             width: 50px;
             height: 50px;
             transition: transform 0.3s ease-in-out;
-        }   
+        }
         .rating-container input[type="radio"]:checked ~ label img {
             transform: scale(1.2);
-        } 
+        }
         button {
             background-color: #8E3520; /* Updated color */
             border: none;
@@ -46,9 +46,9 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease-in-out;
-        }  
+        }
         button:hover {
-            background-color: #45a049;
+            background-color: #8E3520; /* Updated color */
         }
         .comment-container {
             margin-top: 30px;
@@ -73,7 +73,7 @@
             transition: background-color 0.3s ease-in-out;
         }
         .comment-container button:hover {
-            background-color: #45a049;
+            background-color: #8E3520; /* Updated color */
         }
         .feedback {
             margin-top: 30px;

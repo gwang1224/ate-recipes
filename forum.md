@@ -49,9 +49,6 @@
       width: 100%; /* Make the submit button as wide as the container */
       box-sizing: border-box; /* Ensure the padding is included in the width */
     }
-    .post-form input[type="submit"]:hover {
-      background-color: #45a049;
-    }
     /* Center the title */
     h1 {
       text-align: center;
