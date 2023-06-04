@@ -110,7 +110,7 @@
     }
 
     async function call(text) {
-  const api_key = process.env.API_KEY;
+  const api_key = process.toml.key;
 
         const endpoint = 'https://api.openai.com/v1/completions';
         const headers = {
