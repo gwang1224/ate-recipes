@@ -6,6 +6,15 @@
       font-family: monospace;
       font-size: 20px;
     }
+    .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+}
+
   </style>
 </head>
 
