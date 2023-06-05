@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -22,27 +21,6 @@
   <pre id="ship-animation"></pre>
 
   <script>
-    function shipPrint(position) {
-      const animationElement = document.getElementById('ship-animation');
-      const spaces = ' '.repeat(position);
-
-      const frame = `${spaces} .   \n${spaces}  .   \n${spaces}    .\n\\~~~~~/\n \\   /\n  \\ /\n   V\n   |\n   |\n------`;
-
-      animationElement.textContent = frame;
-    }
-
-    async function ship() {
-      const start = 0;
-      const distance = 3;
-      const step = 2;
-
-      for (let position = start; position < distance; position += step) {
-        shipPrint(0);
-        await sleep(1000);
-        shipPrint(2);
-        await sleep(1000);
-      }
-    }
 
     function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
