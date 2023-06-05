@@ -10,12 +10,12 @@
 </head>
 
 <body>
-  <h1>Favorite Foods</h1>
+  <h1>Food Recommendation</h1>
   <ul id="food-list"></ul>
   <input type="text" id="food-input">
-  <button onclick="addFood()" id="add-button">Add Food</button>
+  <button onclick="addFood()" id="add-button" class="button">Add Food</button>
   <br><br>
-  <button onclick="getCuisineRecommendation()">Get Cuisine Recommendation</button>
+  <button class="button" onclick="getCuisineRecommendation()">Get Cuisine Recommendation</button>
   <p id="completion-output"></p>
   <pre id="ship-animation"></pre>
 
