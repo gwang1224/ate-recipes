@@ -2,5 +2,5 @@
 
 [Link to our site](https://gwang1224.github.io/ate-recipes/)
 
-To run locally run "bundle exec jekyll serve"
+**Instructions to run locally:** run the command, "bundle exec jekyll new --force --skip-bundle"
 
