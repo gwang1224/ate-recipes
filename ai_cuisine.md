@@ -14,6 +14,23 @@
 h1 {
   text-align: center;
 }
+    #add-button {
+      padding-left: 10px;
+    }
+    #food-input {
+      margin-left: 500px;
+      width: 800px;
+      height: 80px;
+      border-radius: 40px;
+      text: 20px;
+    }
+    #get-rec {
+      margin-left: 800px;
+    }
+    .mytext {
+    padding-left: 15px;
+    font-size: 30px;
+    }
 
   </style>
 </head>
@@ -21,10 +38,10 @@ h1 {
 <body>
   <h1>Food Recommendation</h1>
   <ul id="food-list"></ul>
-  <input type="text" id="food-input">
+  <input type="text" id="food-input" class="mytext">
   <button onclick="addFood()" id="add-button" class="button">Add Food</button>
   <br><br>
-  <button class="button" onclick="getCuisineRecommendation()">Get Cuisine Recommendation</button>
+  <button class="button" onclick="getCuisineRecommendation()" id="get-rec">Get Cuisine Recommendation</button>
   <p id="completion-output"></p>
   <pre id="ship-animation"></pre>
 
