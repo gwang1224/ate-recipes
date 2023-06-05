@@ -14,7 +14,6 @@
   <ul id="food-list"></ul>
   <input type="text" id="food-input">
   <button onclick="addFood()" id="add-button">Add Food</button>
-  <button onclick="stopAdding()" id="stop-button">Stop</button>
   <br><br>
   <button onclick="getCuisineRecommendation()">Get Cuisine Recommendation</button>
   <p id="completion-output"></p>
@@ -62,13 +61,6 @@
           foodList.appendChild(foodItem);
           foodInput.value = '';
       }
-    }
-
-    function stopAdding() {
-      getCuisineRecommendation();
-      document.getElementById('food-input').disabled = true;
-      document.getElementById('add-button').disabled = true;
-      document.getElementById('stop-button').disabled = true;
     }
   </script>
 </body>
